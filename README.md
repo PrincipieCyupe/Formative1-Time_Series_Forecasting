@@ -63,8 +63,3 @@ all cells from top to bottom.
 | 4. Forecasting experiments | ~90 min | 27 tuning runs plus 3 areas, CPU |
 
 Total about 100 minutes on first run, roughly 95 afterwards.
-
-Figures are written to `reports/figures/` and tables to `reports/tables/` as they are
-produced, so the report can be assembled without rerunning anything.
-
-## Repository layout
