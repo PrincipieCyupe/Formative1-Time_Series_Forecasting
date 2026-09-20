@@ -1,0 +1,28 @@
+id,family,units,dropout,batch,params,epochs,val_rmse,val_mae,fit_seconds,changed,hypothesis,lr,filters,kernel
+E1,LSTM,32.0,0.0,64,4385,60,151.56,99.77,227.9,starting point,32 units is enough to learn the daily cycle,,,
+E2,LSTM,64.0,0.0,64,16961,28,158.33,104.65,224.0,units 32 -> 64,more units capture the interaction between time of day and burst size,,,
+E3,LSTM,64.0,0.2,64,16961,52,163.57,106.67,351.3,dropout 0.0 -> 0.2,the E2 gap between train and validation loss is overfitting,,,
+E4,LSTM,128.0,0.2,64,66689,33,156.96,103.29,485.5,units 64 -> 128 with dropout held at 0.2,regularised capacity keeps paying off up to 128 units,,,
+G1,LSTM,32.0,0.0,32,4385,60,159.14,105.33,386.3,"lr=0.0003, batch=32",grid search,0.0003,,
+G2,LSTM,32.0,0.0,64,4385,60,164.9,108.53,215.7,"lr=0.0003, batch=64",grid search,0.0003,,
+G3,LSTM,32.0,0.0,128,4385,60,178.06,116.4,130.6,"lr=0.0003, batch=128",grid search,0.0003,,
+G4,LSTM,32.0,0.0,32,4385,23,160.02,105.36,151.0,"lr=0.001, batch=32",grid search,0.001,,
+G5,LSTM,32.0,0.0,64,4385,60,151.56,99.77,216.6,"lr=0.001, batch=64",grid search,0.001,,
+G6,LSTM,32.0,0.0,128,4385,60,167.48,109.69,124.0,"lr=0.001, batch=128",grid search,0.001,,
+G7,LSTM,32.0,0.0,32,4385,45,152.87,101.34,270.6,"lr=0.003, batch=32",grid search,0.003,,
+G8,LSTM,32.0,0.0,64,4385,31,152.09,100.81,109.7,"lr=0.003, batch=64",grid search,0.003,,
+G9,LSTM,32.0,0.0,128,4385,19,164.71,107.64,44.8,"lr=0.003, batch=128",grid search,0.003,,
+X1,GRU,32.0,0.0,64,3393,60,162.08,105.24,264.1,"LSTM cell -> GRU cell, everything else identical",the two gating schemes are interchangeable on this series,,,
+E5,1D CNN,,0.0,64,4001,60,160.6,104.66,67.0,"starting point, receptive field 127",a 127-interval window covers the daily period well enough,,16.0,3.0
+E6,1D CNN,,0.0,64,15681,19,192.85,121.84,39.6,filters 16 -> 32,more filters capture more distinct temporal patterns per layer,,32.0,3.0
+E7,1D CNN,,0.2,64,15681,22,186.18,116.26,42.5,dropout 0.0 -> 0.2,the convolutional stack overfits the same way the LSTM did,,32.0,3.0
+E8,1D CNN,,0.2,64,10529,36,160.62,104.35,58.9,"kernel 3 -> 2, receptive field 127 -> 64",cutting the receptive field below one day degrades the forecast,,32.0,2.0
+H1,1D CNN,,0.0,32,4001,60,179.46,114.9,73.7,"lr=0.0003, batch=32",grid search,0.0003,16.0,3.0
+H2,1D CNN,,0.0,64,4001,60,183.98,121.07,54.7,"lr=0.0003, batch=64",grid search,0.0003,16.0,3.0
+H3,1D CNN,,0.0,128,4001,60,208.76,131.74,43.7,"lr=0.0003, batch=128",grid search,0.0003,16.0,3.0
+H4,1D CNN,,0.0,32,4001,34,196.03,129.22,52.1,"lr=0.001, batch=32",grid search,0.001,16.0,3.0
+H5,1D CNN,,0.0,64,4001,60,160.6,104.66,71.6,"lr=0.001, batch=64",grid search,0.001,16.0,3.0
+H6,1D CNN,,0.0,128,4001,53,164.99,107.58,51.3,"lr=0.001, batch=128",grid search,0.001,16.0,3.0
+H7,1D CNN,,0.0,32,4001,27,167.8,110.56,49.8,"lr=0.003, batch=32",grid search,0.003,16.0,3.0
+H8,1D CNN,,0.0,64,4001,25,186.57,118.81,34.7,"lr=0.003, batch=64",grid search,0.003,16.0,3.0
+H9,1D CNN,,0.0,128,4001,24,178.12,116.67,24.7,"lr=0.003, batch=128",grid search,0.003,16.0,3.0

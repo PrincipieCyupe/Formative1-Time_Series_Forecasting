@@ -1,0 +1,5 @@
+stage,rows,frame_mb,rss_before_mb,rss_peak_mb,peak_delta_mb,rss_held_mb,seconds,note,frame_vs_naive_%,peak_vs_naive_%
+"naive read, all columns",4842625,295.6,128.9,445.2,316.4,298.5,3.3,"int64 and float64, 8 columns",0.0,0.0
+"typed read, internet only",4842625,73.9,131.9,238.0,106.1,73.7,2.69,"int16/int64/int16/float32, 4 columns",75.0,66.5
+aggregated over country,1439982,19.2,205.5,447.5,241.9,20.3,0.47,sum per square per interval,93.5,23.5
+"aggregated, sort=False",1439982,19.2,225.4,426.4,200.9,19.6,0.29,same aggregation without sorting output keys,93.5,36.5

@@ -1,0 +1,10 @@
+id,family,units,dropout,batch,params,epochs,val_rmse,val_mae,fit_seconds,changed,hypothesis,lr,filters,kernel
+H1,1D CNN,,0.0,32,4001,60,179.46,114.9,73.7,"lr=0.0003, batch=32",grid search,0.0003,16.0,3.0
+H2,1D CNN,,0.0,64,4001,60,183.98,121.07,54.7,"lr=0.0003, batch=64",grid search,0.0003,16.0,3.0
+H3,1D CNN,,0.0,128,4001,60,208.76,131.74,43.7,"lr=0.0003, batch=128",grid search,0.0003,16.0,3.0
+H4,1D CNN,,0.0,32,4001,34,196.03,129.22,52.1,"lr=0.001, batch=32",grid search,0.001,16.0,3.0
+H5,1D CNN,,0.0,64,4001,60,160.6,104.66,71.6,"lr=0.001, batch=64",grid search,0.001,16.0,3.0
+H6,1D CNN,,0.0,128,4001,53,164.99,107.58,51.3,"lr=0.001, batch=128",grid search,0.001,16.0,3.0
+H7,1D CNN,,0.0,32,4001,27,167.8,110.56,49.8,"lr=0.003, batch=32",grid search,0.003,16.0,3.0
+H8,1D CNN,,0.0,64,4001,25,186.57,118.81,34.7,"lr=0.003, batch=64",grid search,0.003,16.0,3.0
+H9,1D CNN,,0.0,128,4001,24,178.12,116.67,24.7,"lr=0.003, batch=128",grid search,0.003,16.0,3.0

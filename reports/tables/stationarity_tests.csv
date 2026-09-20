@@ -1,0 +1,5 @@
+series,adf_p,kpss_p
+raw,0.0,0.1
+log1p,0.0,0.0257
+"log1p, seasonal diff 144",0.0,0.1
+"log1p, first diff",0.0,0.1

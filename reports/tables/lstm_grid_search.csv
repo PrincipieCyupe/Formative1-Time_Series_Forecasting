@@ -1,0 +1,10 @@
+id,family,units,dropout,batch,params,epochs,val_rmse,val_mae,fit_seconds,changed,hypothesis,lr
+G1,LSTM,32,0.0,32,4385,60,159.14,105.33,386.3,"lr=0.0003, batch=32",grid search,0.0003
+G2,LSTM,32,0.0,64,4385,60,164.9,108.53,215.7,"lr=0.0003, batch=64",grid search,0.0003
+G3,LSTM,32,0.0,128,4385,60,178.06,116.4,130.6,"lr=0.0003, batch=128",grid search,0.0003
+G4,LSTM,32,0.0,32,4385,23,160.02,105.36,151.0,"lr=0.001, batch=32",grid search,0.001
+G5,LSTM,32,0.0,64,4385,60,151.56,99.77,216.6,"lr=0.001, batch=64",grid search,0.001
+G6,LSTM,32,0.0,128,4385,60,167.48,109.69,124.0,"lr=0.001, batch=128",grid search,0.001
+G7,LSTM,32,0.0,32,4385,45,152.87,101.34,270.6,"lr=0.003, batch=32",grid search,0.003
+G8,LSTM,32,0.0,64,4385,31,152.09,100.81,109.7,"lr=0.003, batch=64",grid search,0.003
+G9,LSTM,32,0.0,128,4385,19,164.71,107.64,44.8,"lr=0.003, batch=128",grid search,0.003

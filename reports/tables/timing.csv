@@ -1,0 +1,4 @@
+model,parameters,train_seconds_mean,train_seconds_std,predict_seconds_mean,ms_per_forecast
+1D CNN,4001,60.648,11.122,0.616,0.6111
+ARIMA,3,3.984,0.665,0.154,0.1528
+LSTM,4385,218.048,3.892,0.799,0.7927

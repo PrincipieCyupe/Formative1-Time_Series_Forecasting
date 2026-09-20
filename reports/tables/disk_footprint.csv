@@ -1,0 +1,4 @@
+artefact,size_mb,note,vs_raw_%
+raw text on disk,19841.0,62 tab separated files,0.0
+parquet cache on disk,407.9,"aggregated, snappy compressed",97.9
+analysis array in memory,340.6,"float32 (8928, 10000)",98.3
